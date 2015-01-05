@@ -43,6 +43,7 @@ function my_simone_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'my-simone' ),
+                'social' => __( 'Social Menu', 'my-simone'),
 	) );
 
 	// Enable support for Post Formats.
@@ -93,6 +94,11 @@ function my_simone_scripts() {
 	
 	wp_enqueue_style('my-simone-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
 
+        wp_enqueue_script( 'my-simone-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20150105', true );
+        
+        wp_enqueue_script( 'my-simone-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('my-simone-superfish'), '20150105', true );
+                
+        
 	wp_enqueue_script( 'my-simone-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'my-simone-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
