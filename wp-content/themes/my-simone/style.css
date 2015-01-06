@@ -142,7 +142,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
     font-family: 'Lato', sans-serif;
     color: #000;
-    color: hsl(0, 0%, 0%);	
+    color: hsl(0, 0%, 0%);
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
 }
 p {
     margin-bottom: 1.5em;
@@ -726,6 +728,14 @@ Hun.1 Header
     background: #2c86ba;
     background: hsl(202, 62%, 45%);
 }
+.title-box {
+    width: 600px;
+    max-width: 75%;
+    padding: 4rem;
+    margin: 0 auto;
+    border: solid 1px #fff;
+    border: solid 1px hsla(0, 0%, 100%, .3);
+}
 
 .site-title {
     font-weight: 700;
@@ -741,30 +751,13 @@ Hun.1 Header
     font-size: 20px;
     font-size: 2rem;
 }
-.title-box {
-    width: 600px;
-    max-width: 75%;
-    padding: 4rem;
-    margin: 0 auto;
-    border: solid 1px #fff;
-    border: solid 1px hsla(0, 0%, 100%, .3);
-}
+
 .site-title a,
 .site-description { 
     color: #fff;
     color: hsl(0, 0%, 100%);
 }
-/* Header responsive */
-@media screen and (max-width: 600px) {
-    .site-branding { padding: 0; }
 
-    .title-box {
-        max-width: 100%;
-        margin: 0;
-        padding: 4rem;
-        border: none;
-    }
-}
 /* Header search */
 .search-toggle {
     float: right;
@@ -824,12 +817,51 @@ input[type="search"] {
     display: none; 
 }
 
+/* Header responsive */
+@media screen and (max-width: 600px) {
+    .site-branding { padding: 0; }
+    
+    .title-box {
+        max-width: 100%;
+        margin: 0;
+        padding: 4rem;
+        border: none;
+    }
+}
 /*--------------------------------------------------------------
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-    margin: 0 0 1.5em;
+    margin: 0 0 4em;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
 }
+.widget-title {
+    margin-bottom: 1em;
+    font-size: 24px;
+    font-size: 2.4rem;
+    border-bottom: 2px solid #000;
+}
+.widget a {
+    font-weight: 700;
+    color: #000;
+    color: hsl(0, 0%, 0%);
+}
+
+.widget ul,
+.widget ol {
+    padding: 0;
+    margin: -1em 0 0;
+    list-style-type: none;
+}
+
+.widget li { padding: 1em 0 0; }
+
+.widget li ul,
+.widget li ol { margin-top: 0; }
+
+.widget li li { margin-left: 1.5em; }
 
 /* Make sure select elements fit in widgets */
 .widget select {
@@ -841,6 +873,72 @@ input[type="search"] {
     display: none;
 }
 
+.footer-widgets { margin: 0 auto; }
+
+.footer-widgets .widget-title,
+.footer-widgets .widget a:hover {
+    color: #fff;
+    color: hsl(0, 0%, 100%);
+    border-color: #fff;
+    border-color: hsl(0, 0%, 100%);
+}
+
+.footer-widgets .widget {
+    float: left;
+    width: 320px;
+    margin: 0 4rem 8rem 4rem;
+}
+.widget_recent_entries li:before,
+.widget_recent_comments li:before,
+.widget_archive li:before {
+    display: block;
+    float: left;
+    padding-top: 2px;
+    margin-left: -2.5em;
+    font-family: 'fontawesome';
+    font-size: 14px;
+    font-size: 1.4rem;
+} 
+
+.widget_recent_entries li,
+.widget_recent_comments li { margin: 0 0 .5em 2.5em; }
+
+.widget_recent_entries li:before { content: "\f036"; }
+
+.widget_recent_comments li:before { content: "\f075"; }
+
+.widget_archive li { margin: 0 0 0 2.5em; }
+
+.widget_archive li:before { content: "\f187"; }
+
+.widget_nav_menu a,
+.widget_pages a {
+    display: block;
+    padding: 1em 0;
+    border-bottom: solid 1px hsl(0, 0%, 90%);
+}
+
+.widget_nav_menu li,
+.widget_pages li { padding-top: 0; }
+
+.widget_rss li { margin-bottom: .5em; }
+
+.widget_rss .rss-date,
+.widget_rss cite {
+    display: block;
+    font-size: 85%;
+}
+
+/* Footer widgets responsive */
+@media screen and (max-width: 879px) {
+    #footer-widgets { width: 100%!important; }
+    
+    .footer-widgets .widget {
+        float: none;
+        width: 100%;
+        margin: 0 0 8rem;
+    }
+}
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
@@ -950,4 +1048,26 @@ embed,
 iframe,
 object {
     max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+13.0 Footer
+--------------------------------------------------------------*/
+.site-footer {
+    padding:2em;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #fff;
+    color: hsl(0, 0%, 100%);
+    background: #313131;
+    background: hsl(0,0%,19%);
+}
+.site-footer a {
+    color:#fff;
+    color: hsl(0,0%,100%);
+}
+
+.site-info {
+    text-align: center;
 }

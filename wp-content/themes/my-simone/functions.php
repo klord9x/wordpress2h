@@ -79,6 +79,16 @@ function my_simone_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+        
+        register_sidebar( array(
+            'name'          => __( 'Footer Widgets', 'my-simone' ),
+            'description'   => __( 'Footer widgets area appears in the footer of the site.', 'my-simone' ),
+            'id'            => 'sidebar-2',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h1 class="widget-title">',
+            'after_title'   => '</h1>',
+        ) );
 }
 add_action( 'widgets_init', 'my_simone_widgets_init' );
 
@@ -103,6 +113,9 @@ function my_simone_scripts() {
 	wp_enqueue_script( 'my-simone-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'my-simone-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+        
+        wp_enqueue_script( 'my-simone-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20150106', true );
+                
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
