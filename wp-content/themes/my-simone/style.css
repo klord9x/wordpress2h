@@ -608,23 +608,42 @@ a:active {
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
-    margin: 0 0 1.5em;
-    overflow: hidden;
+        font-size: 18px;
+        font-size: 1.8rem;
+        font-family: 'Lato', sans-serif;
+        color: #000;
+        color: hsl(0, 0%, 0%);
 }
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
-    float: left;
-    width: 50%;
+	width: 50%;
+        float: left;
+        padding-right: 15%;
 }
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
 .post-navigation .nav-next {
-    float: right;
-    text-align: right;
-    width: 50%;
+        width: 50%;	
+        float: right;
+        padding-left: 15%;
+	text-align: right;
 }
 
+.nav-indicator { 
+    margin-bottom: 1em; 
+}
+
+.nav-previous h1,
+.nav-next h1 { 
+    font-weight: 900; 
+}
+.post-nav-box {
+    padding: 2em 0;
+    margin-bottom: 4em;
+    border-top: hsl(0, 0%, 80%) solid 1px;
+    border-bottom: hsl(0, 0%, 80%) solid 1px; 
+}
 /*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
@@ -673,7 +692,18 @@ a:active {
     display: block;
     margin: 0 auto;
 }
+/* Alignment responsive */
+@media screen and (min-width: 1320px) {
+    .alignleft {
+        margin-left: -160px; 
+    }
+}
 
+@media screen and (min-width: 1820px) {
+    .alignright { 
+        margin-right: -160px; 
+    }
+}
 /*--------------------------------------------------------------
 8.0 Clearings
 --------------------------------------------------------------*/
@@ -1220,19 +1250,6 @@ blockquote.alignright {
         padding: 1em 1.5em 0;   
     }
 }
-
-/* Alignment responsive */
-@media screen and (min-width: 1320px) {
-    .alignleft {
-        margin-left: -160px; 
-    }
-}
-
-@media screen and (min-width: 1820px) {
-    .alignright { 
-        margin-right: -160px; 
-    }
-}
                 
 /*--------------------------------------------------------------
 10.2 Asides
@@ -1276,30 +1293,62 @@ blockquote.alignright {
     padding: 0;
 }
 .wp-caption {
-    border: 1px solid #ccc;
-    margin-bottom: 1.5em;
-    max-width: 100%;
+	margin-bottom: 1.5em;
+	max-width: 100%;
 }
 .wp-caption img[class*="wp-image-"] {
-    display: block;
-    margin: 1.2% auto 0;
-    max-width: 98%;
+	display: block;
+	margin: 0 auto;
 }
 .wp-caption-text {
-    text-align: center;
+	text-align: center;
 }
-.wp-caption .wp-caption-text {
-    margin: 0.8075em 0;
+
+.wp-caption .wp-caption-text ,
+.gallery-caption {
+    padding: 0.8075em 1em;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-family: 'Lato', sans-serif;
+    background: #e5e5e5;
+    background: hsl(0, 0%, 90%);
 }
 .site-main .gallery {
-    margin-bottom: 1.5em;
+	margin-bottom: 1.5em;
+}
+.site-main .gallery-item {
+    position: relative;    
+    max-width:100%;
+    float: left;
+    margin-right: 3.333333333%;
+    margin-bottom: 3rem;
+    background: #333;
+    overflow: hidden;
 }
 .gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 50%;
+    width: 100%;
+    padding: 6px 8px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: left;
+    background-color: hsla(0, 0%, 0%, .8);
+    opacity: 0;
+}
+.gallery-item:hover .gallery-caption { 
+    opacity: 1; 
 }
 .site-main .gallery a img {
-    border: none;
+    max-width: 100%;
     height: auto;
-    max-width: 90%;
+    display: block;
+    margin: 0 auto;
+    border: none;
 }
 .site-main .gallery dd,
 .site-main .gallery figcaption {
