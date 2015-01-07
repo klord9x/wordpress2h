@@ -1220,10 +1220,6 @@ blockquote.alignright {
         padding: 1em 1.5em 0;   
     }
 }
-                
-8.6 - Creating pull quotes and pull images
-In style.css
-
 
 /* Alignment responsive */
 @media screen and (min-width: 1320px) {
