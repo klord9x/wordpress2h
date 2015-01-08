@@ -655,6 +655,30 @@ a:active {
 .comment-navigation i {
     margin: 0 1em;
 }
+
+.paging-navigation ul {
+    margin: 0;
+}
+
+.paging-navigation li { display: inline; }
+
+a.page-numbers,
+span.page-numbers {
+     padding: .3em .7em;
+     color: #333;
+     color: hsl(0, 0%, 20%);
+}
+
+a:hover.page-numbers {
+    color: #000;
+    color: hsl(0, 0%, 0%);
+}
+
+.paging-navigation .current {
+    font-weight: bold;
+    color: #000;
+    color: hsl(0, 0%, 0%);
+}
 /*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
@@ -1200,12 +1224,17 @@ input[type="search"] {
         margin-bottom: 1em;
     }
 }
-@media screen and (max-width: 1319px){
-    .posted-on:before {
-        content: ' on ';
-    }
-    .posted-on:after {
-        content: '.';
+.posted-on:before {
+    content: ' on ';
+}
+.posted-on:after {
+    content: '.';
+}
+
+@media screen and (min-width: 1320px) {
+    .single .posted-on:before,
+    .single .posted-on:after {
+        content: '';
     }
 }
  /* Blockquotes */
@@ -1386,6 +1415,23 @@ ol.children { list-style-type: none; }
     background: hsl(100, 39%, 57%);
 }
 /*--------------------------------------------------------------
+Index and Archive
+--------------------------------------------------------------*/
+
+.continue-reading {
+    margin: 0 4rem;
+    font-weight: 900;
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.continue-reading i { margin-left: .5em; }
+.sticky-post {
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+}
+/*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
@@ -1508,6 +1554,10 @@ object {
         width: 1060px; 
         float: right;
     }
+}
+.small-index-thumbnail { 
+    margin-top: -1em;
+    margin-bottom: 1em;
 }
 /*--------------------------------------------------------------
 13.0 Footer
