@@ -1298,7 +1298,9 @@ blockquote.alignright {
 .archive .format-aside .entry-title {
     display: none;
 }
-
+.format-aside .entry-content {
+    margin-top: 1em;
+}
 /*--------------------------------------------------------------
 10.3 Comments
 --------------------------------------------------------------*/
@@ -1431,6 +1433,14 @@ Index and Archive
     top: 1rem;
     right: 3rem;
 }
+.taxonomy-description {
+    padding-top: 2rem;
+    margin: 2rem 0;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    border-top: 1px solid hsl(0, 0%, 75%);
+    border-bottom: 1px solid hsl(0, 0%, 75%);
+}
 /*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
@@ -1555,6 +1565,26 @@ object {
         float: right;
     }
 }
+.front-index-thumbnail {
+    margin-bottom: -3.2em;
+}
+
+@media screen and (max-width: 779px){
+    .front-index-thumbnail {
+        margin-bottom: 0;
+    }
+}
+.single-post-thumbnail img,
+.front-index-thumbnail img {
+    display: block;
+    margin: 0 auto;
+}
+
+.has-thumbnail {
+    position: relative;
+    margin-top: -8em;
+}
+
 .small-index-thumbnail { 
     margin-top: -1em;
     margin-bottom: 1em;
