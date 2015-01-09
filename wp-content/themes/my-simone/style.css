@@ -1033,15 +1033,6 @@ input[type="search"] {
     margin: 0 0 1.5em;
 }
 
-.site-content {
-    padding-bottom: 4em;
-    background: #b2b2b2;
-}
-.single .site-content,
-.page .site-content { 
-    background: #fff; 
-    background: hsl(0, 0%, 100%);
-}
 /* Typography */
 .entry-title {
     margin: 0 0 2rem;

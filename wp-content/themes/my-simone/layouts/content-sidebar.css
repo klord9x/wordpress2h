@@ -56,6 +56,15 @@ Layout: Content-Sidebar
     border: none;
 }
 
+.page-header,
+.paging-navigation {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    list-style-type: none;
+    background: #fff;
+}
+
 @media screen and (min-width: 1820px) {
     .index-box blockquote.alignright { padding-right: 2em; }
 }
@@ -101,13 +110,4 @@ Layout: Content-Sidebar
         float: none;
         margin: 1em auto 0;
     }
-}
-
-.page-header,
-.paging-navigation {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    margin-bottom: 2em;
-    list-style-type: none;
-    background: #fff;
 }
